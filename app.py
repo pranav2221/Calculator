@@ -12,6 +12,7 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/")
 def home(request: Request):
+    print("CI/CD TEST RUN 🚀")  # 👈 ADD THIS LINE
     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.get("/calculate")
@@ -28,3 +29,4 @@ def calculate(num1: float, num2: float, operation: str):
         result = "Invalid"
 
     return {"result": result}
+
