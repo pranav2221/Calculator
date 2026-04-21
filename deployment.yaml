@@ -15,5 +15,6 @@ spec:
       containers:
       - name: calculator-container
         image: pranav2221/calculator-app
+        imagePullPolicy: Always   
         ports:
         - containerPort: 8000
