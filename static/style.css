@@ -1,35 +1,47 @@
 body {
+    margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #1e1e2f;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
 .calculator {
-    background: #2c2c3c;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    width: 320px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
-#display {
-    width: 100%;
-    height: 60px;
-    margin-bottom: 15px;
-    font-size: 24px;
-    text-align: right;
-    padding: 10px;
-    border: none;
+.display {
+    background: rgba(0,0,0,0.2);
     border-radius: 10px;
-    background: #1e1e2f;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+#expression {
+    color: #ddd;
+    font-size: 16px;
+    text-align: right;
+}
+
+#result {
+    width: 100%;
+    border: none;
+    background: transparent;
     color: white;
+    font-size: 28px;
+    text-align: right;
 }
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(4, 70px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
@@ -37,26 +49,47 @@ button {
     height: 60px;
     font-size: 18px;
     border: none;
-    border-radius: 10px;
-    background: #3e3e5e;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.2);
     color: white;
     cursor: pointer;
     transition: 0.2s;
 }
 
 button:hover {
-    background: #5a5a8a;
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.operator {
+    background: #ff9500;
 }
 
 .equal {
-    background: #ff9500;
-    grid-row: span 2;
+    background: #28a745;
 }
 
-.equal:hover {
-    background: #e08900;
+.clear {
+    background: #dc3545;
 }
 
 .zero {
     grid-column: span 2;
+}
+
+.history {
+    margin-top: 15px;
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
 }
