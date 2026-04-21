@@ -1,33 +1,40 @@
 body {
     margin: 0;
+    font-family: 'Segoe UI', sans-serif;
     height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
+/* Layout */
+.app {
+    display: flex;
+    gap: 20px;
+}
+
+/* Calculator */
 .calculator {
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(20px);
     background: rgba(255,255,255,0.1);
-    border-radius: 20px;
     padding: 20px;
-    width: 320px;
+    border-radius: 20px;
+    width: 300px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
 .display {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.3);
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 15px;
 }
 
 #expression {
-    color: #ddd;
-    font-size: 16px;
+    color: #ccc;
     text-align: right;
+    font-size: 14px;
 }
 
 #result {
@@ -39,6 +46,7 @@ body {
     text-align: right;
 }
 
+/* Buttons */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -53,7 +61,7 @@ button {
     background: rgba(255,255,255,0.2);
     color: white;
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s ease;
 }
 
 button:hover {
@@ -81,15 +89,29 @@ button:active {
     grid-column: span 2;
 }
 
+/* History Panel */
 .history {
-    margin-top: 15px;
-    background: rgba(0,0,0,0.2);
-    padding: 10px;
-    border-radius: 10px;
+    width: 200px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 15px;
     color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.history h2 {
+    margin-top: 0;
+    font-size: 18px;
 }
 
 .history ul {
     list-style: none;
     padding: 0;
+    font-size: 14px;
+}
+
+.history li {
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 3px;
 }
