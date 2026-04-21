@@ -28,6 +28,4 @@ jobs:
           chmod +x kubectl
           sudo mv kubectl /usr/local/bin/
 
-      - name: Deploy to Kubernetes
-        run: |
-          kubectl rollout restart deployment calculator-app
+      
